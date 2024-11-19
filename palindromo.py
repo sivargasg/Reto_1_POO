@@ -8,7 +8,7 @@ def palindromo(palabra):
     Retorna:
     bool: True si la palabra es un palíndromo, False en caso contrario.
     """
-    palabra = palabra.lower()
+    palabra = palabra.lower() #escribe toda la palabra en minúscula para evitar errores
     largo = len(palabra)
     for n in range(largo // 2):
         if palabra[n] != palabra[largo - 1 - n]:
