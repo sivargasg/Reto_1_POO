@@ -29,13 +29,10 @@ def anagramas(entrada):
     diccionario_anagramas = {}
     for palabra in lista:
         palabra_ordenada = ''.join(sorted(palabra))
-        if palabra_ordenada in diccionario_anagramas:
-        #palabra_ordenada se vuelve una clave dentro del diccionario
-            diccionario_anagramas[palabra_ordenada].append(palabra)
-            #se añade la palabra como otro valor de una clave ya usada
+        if palabra_ordenada in diccionario_anagramas: #palabra_ordenada se vuelve una clave dentro del diccionario
+            diccionario_anagramas[palabra_ordenada].append(palabra) #Se añade la palabra como otro valor de una clave ya usada
         else:
-            diccionario_anagramas[palabra_ordenada] = [palabra] 
-            #se pone la palabra dada como el único valor para la clave
+            diccionario_anagramas[palabra_ordenada] = [palabra] #Se pone la palabra dada como el único valor para la clave
     for grupo in diccionario_anagramas.values():
         if len(grupo) > 1:
             lista_anagramas.extend(grupo)
